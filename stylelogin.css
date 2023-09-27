@@ -1,0 +1,309 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+   background-image: url('images/fondodelogin.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #242430;
+   background-size: cover;
+   background-position: center;
+}
+
+ion-icon[name="arrow-redo-sharp"] {
+   font-size: 24px;
+   color: #ffff;
+   font-size: 40px;
+}
+
+/* Estilos del encabezado */
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 99;
+   background-color: rgba(0, 0, 0, 0.7);
+   backdrop-filter: blur(10px);
+}
+
+/* Estilo para el ítem de lista */
+.menu-item {
+   list-style-type: none;
+   padding: 10px;
+}
+
+/* Estilo para el enlace dentro del ítem de lista */
+.menu-item a {
+   text-decoration: none;
+   color: #333;
+   font-weight: bold;
+}
+
+/* Estilo para el enlace cuando se coloca el cursor sobre él */
+.menu-item a:hover {
+   color: #007bff;
+}
+
+.logoo {
+   font-size: 2em;
+   color: #6867c9;
+   user-select: none;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+/* Estilos para el cuerpo */
+.logo {
+   font-size: 2em;
+   color: #fff;
+   user-select: none;
+   text-decoration: none;
+}
+
+/* Estilos de navegación */
+.navigation a {
+   position: relative;
+   font-size: 1.1em;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 40px;
+}
+
+.navigation a::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   border-top: -6px;
+   width: 100%;
+   height: 3px;
+   background: #fff;
+   border-radius: 5px;
+   transform-origin: right;
+   transform: scaleX(0);
+   transition: transform .5s;
+}
+
+.navigation a:hover::after {
+   transform-origin: left;
+   transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+   width: 130px;
+   height: 50px;
+   background: transparent;
+   border: 2px solid #fff;
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 1.1em;
+   color: #fff;
+   font-weight: 500;
+   margin-left: 40px;
+   transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+   background: #fff;
+   color: #162938;
+}
+
+/* Estilos para el contenedor del formulario */
+.wrapper {
+   position: relative;
+   width: 400px;
+   height: 440px;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, .5);
+   border-radius: 20px;
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   transform: scale(0);
+   transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+   transform: scale(1);
+}
+
+.wrapper .active {
+   height: 520px;
+}
+
+/* Estilos para los formularios */
+.wrapper .form-box {
+   width: 100%;
+   padding: 40px;
+}
+
+.wrapper .form-box.login {
+   transition: transform .18s ease;
+   transform: translateX(0);
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .form-box.register {
+   position: absolute;
+   transition: none;
+   transform: translateX(400px);
+   background-color: rgba(0, 0, 0, .5);
+}
+
+.wrapper .active.form-box.login {
+   transition: none;
+   transform: translateX(-400px);
+   background-color: rgba(0, 0, 0, .5);
+}
+
+.wrapper .active.form-box.register {
+   transition: transform .18s ease;
+   transform: translateX(0)
+}
+
+/* Estilos para el icono de cierre */
+.wrapper .icon-close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 45px;
+   height: 45px;
+   background: #7270ec;
+   font-size: 2em;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom-left-radius: 20px;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.form-box h2 {
+   font-size: 1.5em;
+   color: #7270ec;
+   text-align: center;
+}
+
+/* Estilos para las cajas de entrada de texto */
+.input-box {
+   position: relative;
+   width: 100%;
+   height: 50px;
+   border-bottom: 2px solid #cecece;
+   margin: 30px 0;
+}
+
+.input-box label {
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translate(0%);
+   font-size: 1em;
+   color: #cecece;
+   font-weight: 500;
+   pointer-events: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+   top: -5px;
+}
+
+.input-box input {
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   border: none;
+   outline: none;
+   font-size: 1em;
+   color: #EFFF;
+   font-weight: 600;
+   padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+   position: absolute;
+   right: 8px;
+   font-size: 1.2em;
+   color: #EFFF;
+   line-height: 57px;
+}
+
+/* Estilos para la sección Recordar y Olvidar */
+.remember-forgot {
+   font-size: .9em;
+   color: #EFFF;
+   font-weight: 500;
+   margin: -15px 0 15px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.remember-forgot label input {
+   accent-color: #efff;
+   margin-right: 3px;
+}
+
+.remember-forgot a {
+   color: #efff;
+   text-decoration: none;
+}
+
+.remember-forgot a:hover {
+   text-decoration: underline;
+}
+
+/* Estilos para los botones */
+.btn {
+   width: 100%;
+   height: 45px;
+   background: #7270ec;
+   border: none;
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 1em;
+   color: #fff;
+   font-weight: 500;
+}
+
+/* Estilos para el pie de página o cualquier otra sección */
+.login-register {
+   font-size: .9em;
+   color: #7270ec;
+   text-align: center;
+   font-weight: 500;
+   margin: 25px 0 10px;
+}
+
+.login-register p a {
+   color: #7270ec;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.login-register p a:hover {
+   text-decoration: underline;
+}
