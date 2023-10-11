@@ -1,0 +1,373 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url(images/fondodelogin.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #fff;
+}
+
+.container-form {
+   width: 90%;
+   height: 90vh;
+   display: flex;
+   justify-content: space-around;
+   transition:  all .5s ease-out;
+}
+
+.welcome-back {
+   display: flex;
+   align-items: center;
+   text-align: center;
+}
+
+.message {
+   padding: 1rem;
+}
+
+.message h2 {
+   font-size: 1.7rem;
+   padding: 1rem 0;
+}
+
+.message button {
+   padding: 1rem;
+   font-weight: 400;
+   background-color: #4a4aee;
+   border-radius: 2rem;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: .9rem;
+   margin-top: 2rem;
+   transition: all .3s ease-in;
+   color: #fff;
+}
+
+.message button:hover {
+   background-color: #6464f8;
+}
+
+.formulario {
+   width: 400px;
+   padding: 1rem;
+   margin: 2rem;
+   background-color: rgb(51, 51, 51, 0.602);
+   text-align: center;
+}
+
+.create-account {
+   padding: 2.7rem 0;
+   font-size: 1.7rem;
+}
+
+.iconos {
+   width: 200px;
+   display: flex;
+   justify-content: space-around;
+   margin: auto;
+}
+
+.border-icon {
+   height: 20px;
+   width: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5rem;
+   border: solid thin white;
+   border-radius: 50%;
+   font-size: 1.5rem;
+   transition: all .3s ease-in;
+}
+
+.border-icon:hover {
+   background-color: #4a4aee;
+   cursor: pointer;
+}
+
+.cuenta-gratis {
+   padding: 2rem 0;
+}
+
+.formulario input {
+   width: 70%;
+   display: block;
+   margin: auto;
+   margin-bottom: 2rem;
+   background-color: transparent;
+   border: none;
+   border-bottom: white thin solid;
+   text-align: center;
+   outline: none;
+   padding: .2rem 0;
+   font-size: .9rem;
+   color: white;
+}
+
+.formulario input[type="button"] {
+   width: 60%;
+   margin: auto;
+   border: solid thin white;
+   padding: .7rem;
+   border-radius: 2rem;
+   background-color: white;
+   font-weight: 600;
+   margin-top: 3rem;
+   font-size: .8rem;
+   cursor: pointer;
+   color: #222;
+}
+
+.sign-in {
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.sign-in.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.sign-up.active {
+   opacity: 0;
+   visibility: hidden;
+}
+
+
+
+
+
+
+
+
+.Logo {
+   font-size: 25px;
+   color: #7270ec;
+   text-transform: uppercase;
+   font-weight: 800;
+
+   position: relative;
+   letter-spacing: 2px;
+   transition: 1.5s;
+   text-decoration: none;          
+   
+}
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   transition: 0.7s;
+   padding: 35px 20px;
+   z-index: 10;
+   background-color: rgba(0, 0, 0, 0.7); 
+}
+.text-V{
+   display: flex;
+   margin: 20px 20px;
+   font-size: 20px;
+   color: #ffffff !important;
+   text-align:center ;
+}
+.header-txt1 h1 {
+   font-size: 24px;
+   color: #feffff;
+   text-transform: capitalize;
+   text-align:center ;
+   padding: 25px 20px;
+}
+
+
+.header-img {
+   width: 50%;
+   text-align: right;
+}
+
+.header-img img {
+   width: 600px;
+
+}
+
+
+
+.menu {
+   position: absolute;
+   top: 0;
+   left: .5;
+   right: .9;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+}
+
+.menu .navbar ul li a {
+   font-size: 18px;
+   padding: 20px;
+   color: #feffff;
+   display: block;
+
+   position: relative;   
+   margin: 0 15px;
+   text-decoration: none;   
+   letter-spacing: 2px;
+   font-weight: 600;
+   transition: 0.7s;
+   text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 20px;
+  transition: .3s linear;
+}
+
+.menu .navbar ul li a:hover {
+   color: #7270ec;
+   
+}
+
+#menu {
+   display: none;
+}
+
+.menu-icono {
+   width: 25px;
+}
+
+.menu label {
+   cursor: pointer;
+   display: none;
+}
+
+.submenu {
+   position: relative;
+}
+
+.submenu #carrito {
+   display: none;
+}
+
+.submenu:hover #carrito {
+   display: block;
+   position: absolute;
+   right: 0;
+   backdrop-filter: blur(10px);
+   top: 100%;
+   z-index: 1;
+   background-color: rgba(78, 75, 80, 0.8); /* Fondo parcialmente transparente */
+   padding: 20px;
+   min-width: 400px;
+}
+
+
+
+
+.menu .navbar ul li {
+   position: relative;
+  
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: inline-block;
+  position: relative;
+  transition: .3s linear;
+  z-index: 1000;
+}
+
+.menu .navbar ul li a {
+   font-size: 18px;
+   padding: 20px;
+   color: #feffff;
+   display: block;
+
+   position: relative;   
+   margin: 0 15px;
+   text-decoration: none;   
+   letter-spacing: 2px;
+   font-weight: 600;
+   transition: 0.7s;
+   text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 20px;
+  transition: .3s linear;
+}
+
+.menu .navbar ul li a:hover {
+   color: #7270ec;
+   
+}
+
+
+.navbar ul li{
+	display: inline-block;
+	position: relative;
+	transition: .3s linear;
+	z-index: 1000;
+}
+.navbar ul li:hover{
+	transform: scale(1.1);
+}
+.navbar ul li a{
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 12px 20px;
+	transition: .3s linear;
+}
+.navbar ul li a:hover{
+	color: black;
+	transform: scale(1.1);
+}
+.navbar ul li:hover .hijos{
+	display: block;
+}
+.navbar .submenu .hijos{
+	display: none;
+	background:  rgba(0, 0, 0, 0.7); 
+
+	position: absolute;
+	width: 100%;
+}
+.navbar .submenu .hijos li{
+	display: block;
+	overflow: hidden;
+	border-bottom: none;
+}
+.navbar .submenu .hijos li a{
+	display: block;
+}
+
+
+.btn-3 {
+   display: inline-block;
+   padding: 10px 25px;
+   font-size: 14px;
+   color: #feffff;
+   border: 1px solid #7270ec;
+   border-radius: 25px;
+   margin-top: 15px;
+}
+
+.btn-3:hover {
+   background-color: #7270ec;
+}
