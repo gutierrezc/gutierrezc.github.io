@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="styledevento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="Logo">The elixir of life</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="submenu">
+                        <a>Productos</a>
+                        <ul class="hijos">
+                            <li><a href="CERVEZA.html">Cerveza</a></li>
+                            <li><a href="RON.html">Ron</a></li>
+                            <li><a href="WHISKY.html">Whisky</a></li>
+                            <li><a href="VINO.html">Vinos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="Evento.html">Eventos</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li class="submenu">
+                        <a href="Login.html">Mi cuenta</a>
+                        <ul class="hijos">
+                            <li><a href="">Registro</a></li>
+                            <li><a href="Loginyregistro.html">Iniciar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="submenu">
+                <img src="images/car.svg" id="img-carrito" alt="">
+                <div id="carrito">
+                    <table id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#" id="vaciar-carrito" class="btn-3">Vaciar carrito</a>
+                    <a href="Procesarcompra.html" class="btn-3">Procesar compra</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <h1>¡PROXIMAMENTE!</h1>
+        <h2>Solo aqui descubre nuevos productos</h2>
+        <div class="countdown">
+            <div>
+                <p id="days">90</p>
+                <span>Días</span>
+            </div>
+            <div>
+                <p id="hours">19</p>
+                <span>Horas</span>
+            </div>
+            <div>
+                <p id="minutes">05</p>
+                <span>Minutos</span>
+            </div>
+            <div>
+                <p id="seconds">45</p>
+                <span>Segundos</span>
+            </div>
+        </div>
+    </section>
+    <section class="final-sms">
+        <h2>¡EMPEZARON LAS OFERTAS ESPECIALES!</h2>
+    </section>
+    <script src="scriptdeevento.js"></script>
+</body>
+</html>
